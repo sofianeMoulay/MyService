@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: name-display.local
+spec:
+    rules:
+    - host: name-diplay.local
+    http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+                service:
+                    name: name-display.local
+                    port:
+                        number: 80
